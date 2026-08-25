@@ -1,0 +1,112 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    --bg-primary: #FAF8F5;
+    --bg-card: #FFFFFF;
+    --bg-elevated: #F3EFEA;
+    --border-color: #E6DFD5;
+    --text-primary: #141413;
+    --text-secondary: #57534E;
+    --text-muted: #8C827A;
+    --gold-primary: #C49102;
+    --gold-dark: #A37801;
+    --gold-light: #E8D8C4;
+    --gold-champagne: #F5ECD7;
+    --brand-pink: #C49102;
+    --brand-pink-dark: #A37801;
+    --brand-pink-light: #F7F1E5;
+    --brand-purple: #8C6D23;
+    --brand-accent: #D4AF37;
+    --brand-gold: #C49102;
+  }
+
+  .dark {
+    --bg-primary: #0A0A0A;
+    --bg-card: #121212;
+    --bg-elevated: #1A1A1A;
+    --border-color: rgba(255, 255, 255, 0.08);
+    --text-primary: #F5F5F4;
+    --text-secondary: rgba(245, 245, 244, 0.7);
+    --text-muted: rgba(245, 245, 244, 0.45);
+    --gold-primary: #C49102;
+    --gold-dark: #A37801;
+    --gold-light: #E8D8C4;
+    --gold-champagne: #2A2416;
+    --brand-pink: #D4AF37;
+    --brand-pink-dark: #C49102;
+    --brand-pink-light: #241D10;
+    --brand-purple: #C49102;
+    --brand-accent: #E8D8C4;
+    --brand-gold: #C49102;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+  }
+}
+
+/* Artistic Flair Typography utilities */
+.font-serif-editorial {
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-sans-artistic {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+/* Artistic Flair Glow & Border effects */
+.glow-gold {
+  box-shadow: 0 0 30px -5px rgba(196, 145, 2, 0.35);
+}
+
+.glow-champagne {
+  box-shadow: 0 0 25px -5px rgba(232, 216, 196, 0.25);
+}
+
+.glow-pink {
+  box-shadow: 0 0 25px -5px rgba(196, 145, 2, 0.3);
+}
+
+.glow-purple {
+  box-shadow: 0 0 25px -5px rgba(196, 145, 2, 0.25);
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #E8D8C4 0%, #D4AF37 50%, #C49102 100%);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #E8D8C4 0%, #D4AF37 50%, #C49102 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark-card-gradient {
+  background: linear-gradient(180deg, #161616 0%, #0E0E0E 100%);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: #C49102;
+  border-radius: 2px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #614909;
+}
+
